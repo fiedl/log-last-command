@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "A short description of your package",
   "activationEvents": ["log-last-command:copy-to-other-pane"],
-  "repository": "https://github.com/atom/log-last-command",
+  "repository": "https://github.com/fiedl/log-last-command",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

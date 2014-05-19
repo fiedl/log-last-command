@@ -8,7 +8,6 @@ module.exports =
     atom.workspaceView.command "log-last-command:copy-to-other-pane", => @copy_to_other_pane()
 
   copy_to_other_pane: ->
-    console.log @other_pane_item()
     @insert_to_other_pane_item(@text_to_insert())
 
   text_to_insert: ->
@@ -17,6 +16,11 @@ module.exports =
       if text_to_insert == ""
         current_row = @active_pane_item().getCursorBufferPosition().row
         text_to_insert = @active_pane_item().lineForBufferRow(current_row)
+      return text_to_insert
+    else if @pane_item_is_terminal(@active_pane_item())
+      lines = @active_pane_item().text().split("\n")
+      text_to_insert = lines.pop()
+      console.log text_to_insert
       return text_to_insert
     else
       return ""
