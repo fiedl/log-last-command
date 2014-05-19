@@ -1,0 +1,18 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+#'.workspace':
+#  'cmd-shift-l': 'log-last-command:copy-to-other-pane'
+'.term2':
+  'cmd-ö': 'log-last-command:copy-to-other-pane'
+'.editor':
+  'cmd-ö': 'log-last-command:copy-to-other-pane'
+
+# '.term2':
+# https://github.com/webBoxio/atom-term2/blob/master/keymaps/term2.cson

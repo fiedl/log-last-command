@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable log-last-command': 'log-last-command:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'log-last-command'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'log-last-command:toggle' }
+      ]
+    ]
+  }
+]
